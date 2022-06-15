@@ -1,0 +1,54 @@
+﻿What topic are you exploring?
+* Comparing streaming numbers to other metrics such as audio features and revenue
+
+
+What is the problem you are trying to solve?
+* To find out which audio features of my music are the most popular amongst my listeners and which produce the most revenue
+* To better understand and gain insight into my music data
+
+
+What metrics will you use to measure your data to achieve your objective? Who are the stakeholders?
+* I will use data taken from Distrokid (all streaming platforms), Soundcloud, Bandcamp, and Spotify using the Spotify API
+* The main stakeholder for this project is me and possibly other artists who wish to use the same analysis as me
+
+
+Who is your audience for this analysis and how does this affect your analysis process and presentation?
+* The audience will be similar artists like myself who I will be presenting my analysis to. I hope to give them insights into how they release and share their music
+
+
+How will this data help your stakeholders make decisions?
+* The data will help make decisions by revealing what type of music is most popular to my audience so I will know what direction to take my music for future releases
+
+
+Where is your data located?
+* The data is located in multiple places. Distrokid collects the streaming and revenue data from most of the platforms the music is released on such as Spotify and Apple Music. Additional streaming numbers were taken from Soundcloud and Bandcamp. Since these two platforms don’t have downloadable data for streams, they were entered into datasets manually. For audio features, the data is located in the Spotify database which will need to be accessed through the Spotify API (using python)
+
+
+How is the data organized?
+* The data is organized in different ways with different column names. For all the music data there is a song name with various metrics accompanying them such as streams, earnings, store, shazams, and many audio features. Merging and aggregation is needed to further organize the data as a whole
+
+
+Are there issues with bias or credibility in this data? Does your data ROCCC?
+* The data comes straight from the credible streaming services that report the data so there should be no bias or inaccuracies. It is reliable, original, comprehensive, and current (Retrieved April 24th)
+
+
+
+
+What tools are you choosing and why?
+* I will continue using Python to further clean up the data and organize the column names for merging 
+* I will also use excel to clean up the data manually, specifically the bandcamp sales data. This data is small enough to do this and contains many empty values/columns and unnecessary data.
+What steps have you taken to ensure that your data is clean?
+* Excel cleaning and merging
+   * Cleaning up bandcamp sales data:
+      * Removing irrelevant data columns and keeping album titles and pay
+      * Creating a pivot table to sum up all album sales
+      * Creating new table with vlookup to match album titles and distribute equally amongst songs for corresponding albums
+      * Merging with bandcamp streams
+   * Merging soundcloud and bandcamp data
+      * Cleaning up soundcloud data and matching with streaming services titles
+      * Combining both into one dataset with matching columns
+      * Make columns match with distrokid data
+      * (one . messed up data, data types, excel not liking certain title names)
+* Python + Pandas cleaning, processing, and merging
+   * Concatenating Distrokid, Bandcamp, and Soundcloud data
+   * Merging Song Totals with Audio Features
